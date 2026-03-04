@@ -11,7 +11,7 @@ app.use(swagger({ path: "/swagger" }));
 registerFolderController(app);
 registerItemController(app);
 app.get("/assets/rendy.jpeg", () => {
-  const file = Bun.file(new URL("../public/rendy.jpeg", import.meta.url))
+  const file = Bun.file(new URL("./public/rendy.jpeg", import.meta.url))
   return new Response(file, {
     headers: {
       "Content-Type": "image/jpeg",
@@ -20,7 +20,7 @@ app.get("/assets/rendy.jpeg", () => {
   })
 })
 app.get("/assets/elysia_v.webp", () => {
-  const file = Bun.file(new URL("../public/elysia_v.webp", import.meta.url))
+  const file = Bun.file(new URL("./public/elysia_v.webp", import.meta.url))
   return new Response(file, {
     headers: {
       "Content-Type": "image/webp",
@@ -29,7 +29,7 @@ app.get("/assets/elysia_v.webp", () => {
   })
 })
 app.get("/assets/elysia.png", () => {
-  const file = Bun.file(new URL("../public/elysia.png", import.meta.url))
+  const file = Bun.file(new URL("./public/elysia.png", import.meta.url))
   return new Response(file, {
     headers: {
       "Content-Type": "image/png",
@@ -43,7 +43,7 @@ app.get("/", () => {
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Explorer API x Elysia.js</title>
+  <title>Base API x Elysia.js</title>
   <link rel="icon" href="/assets/elysia.png">
   <style>
     :root {
